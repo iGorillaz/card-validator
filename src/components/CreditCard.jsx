@@ -37,7 +37,7 @@ const CreditCard = () => {
                 type="number"
                 id="number"
                 name="number"
-					 className={s.numInput}
+                className={s.numInput}
                 placeholder="Card Number"
                 value={values.number}
                 onChange={handleChange}
@@ -75,16 +75,16 @@ const CreditCard = () => {
                 </Form.Group>
               </Col>
             </Row>
-				<div className={s.butDiv}>
-            <Button size={"block"} id="validateButton" type="submit">
-              Validate
-            </Button>
-				</div>
+            <div className={s.butDiv}>
+              <Button size={"block"} id="validateButton" type="submit">
+                Validate
+              </Button>
+            </div>
           </Form>
         </div>
         <Alert
           id="alertMessage"
-			 className={s.alert}
+          className={s.alert}
           variant={errors.variant}
           show={errors.show}>
           {errors.message}
@@ -93,5 +93,6 @@ const CreditCard = () => {
     </div>
   );
 };
+
 
 export default CreditCard;
