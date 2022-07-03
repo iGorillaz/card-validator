@@ -2,14 +2,15 @@ import { Button, Form, Alert, Row, Col } from "react-bootstrap";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
 import useForm from "../hooks/useForm";
+import s from "./CreditCard.module.css";
 
 const CreditCard = () => {
   const { handleChange, handleFocus, handleSubmit, values, errors } = useForm();
   return (
-    <div className="container">
+    <div className={s.container}>
       <div className="box justify-content-center align-items-center">
-        <div className="form-div">
-          <div className="credit-card">
+        <div className={s.formDiv}>
+          <div className={s.creditCard}>
             <Cards
               name={values.name}
               number={values.number}
@@ -73,12 +74,16 @@ const CreditCard = () => {
                 </Form.Group>
               </Col>
             </Row>
-            <Button size="block" id="validateButton" type="submit">
+            <Button size={"block"} id="validateButton" type="submit">
               Validate
             </Button>
           </Form>
         </div>
-        <Alert id="alertMessage" variant={errors.variant} show={errors.show}>
+        <Alert
+          id="alertMessage"
+			 className={s.alert}
+          variant={errors.variant}
+          show={errors.show}>
           {errors.message}
         </Alert>
       </div>
