@@ -21,6 +21,16 @@
 	padding: 0;
 }
 
+.numInput, .row, .butDiv {
+	margin-top: 10px;
+}
+
+.butDiv {
+	display: flex;
+	justify-content: center;
+
+}
+
 .creditCard {
 	margin-bottom: 10%;
 }

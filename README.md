@@ -1,8 +1,9 @@
-# Getting Started with Create React App
+# Card Validator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Task:
+Make a small application that will allow the user to check the validity of a credit card. The validation must apply to every field of the input. NAME / EXPIRY DATE / CARD NUMBER / SECRET CODE. And it would also not be bad to recognize VISA / MASTERCARD, etc.
 
-## Available Scripts
+## Result
 
 In the project directory, you can run:
 

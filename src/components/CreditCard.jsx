@@ -37,6 +37,7 @@ const CreditCard = () => {
                 type="number"
                 id="number"
                 name="number"
+					 className={s.numInput}
                 placeholder="Card Number"
                 value={values.number}
                 onChange={handleChange}
@@ -44,7 +45,7 @@ const CreditCard = () => {
                 isValid={errors.cnumber}
               />
             </Form.Group>
-            <Row>
+            <Row className={s.row}>
               <Col>
                 <Form.Group>
                   <Form.Control
@@ -74,9 +75,11 @@ const CreditCard = () => {
                 </Form.Group>
               </Col>
             </Row>
+				<div className={s.butDiv}>
             <Button size={"block"} id="validateButton" type="submit">
               Validate
             </Button>
+				</div>
           </Form>
         </div>
         <Alert
