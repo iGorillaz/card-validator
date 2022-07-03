@@ -1,4 +1,5 @@
 import { useState } from "react";
+import validateInfo from '../utils/validateInfo'
 
 const useForm = () => {
   const [values, setValues] = useState({
