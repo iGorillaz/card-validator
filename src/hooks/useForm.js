@@ -1,29 +1,37 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 const useForm = () => {
-	const [values, setValues] = useState({
-		name: '',
-		number: '',
-		expiration: '',
-		cvc: '',
-		focus: '',
-	})
+  const [values, setValues] = useState({
+    name: "",
+    number: "",
+    expiration: "",
+    cvc: "",
+    focus: "",
+  });
 
-	const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
 
-	const handleFocus = (e) => {
+  const handleFocus = (e) => {
+    setValues({
+      ...values,
+      focus: e.target.name,
+    });
+  };
 
-	}
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+	 setValues({
+		...values,
+		[name]: value
+	 })
+  };
 
-	const handleChange = (e) => {
-		
-	}
+  const handleSubmit = (e) => {
+	e.preventDefault();
+	setErrors(validateInfo(values))
+  };
 
-	const handleSubmit = (e) => {
-		
-	}
+  return { handleFocus, handleChange, handleSubmit, values, errors };
+};
 
-	return { handleFocus, handleChange, handleSubmit, values, errors }
-}
- 
 export default useForm;
