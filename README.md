@@ -5,3 +5,18 @@ Make a small application that will allow the user to check the validity of a cre
 
 ## Result
 
+#### Main
+![MainPage](assets/1.png)
+
+#### Card type and validation 
+![CardTV](assets/2.png)
+
+#### Card invalid number example
+![CardInvalid](assets/3.png)
+
+#### Card CVC side and validation
+![CardCVC](assets/4.png)
+
+## Used technology
+
+##### React / react-bootstrap / card-validator / react-credit-cards
